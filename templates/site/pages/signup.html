@@ -1,0 +1,20 @@
+{% extends "site/base.html" %}
+{% block content %} 
+    <div id="registration">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="d-flex registr-way">
+                    <a href="home.html">ГЛАВНАЯ</a>
+                    <p class="ml-2">/ ЗАРЕГИСТРИРОВАТЬСЯ</p>
+                </div>
+                <div class="main-registration">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Sign up</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

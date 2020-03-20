@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'site/includes/head.html' %}
+<body>
+    <!--Navbar-->
+    {% include 'site/includes/navbar.html' %}
+    <!--Header-->
+    <main>
+    <!--    Filter-->
+    {% include 'site/includes/filter.html' %}
+    {% block content %}
+    {% endblock %}
+    <!--Modal-->
+    {% include 'site/includes/modal.html' %}
+
+    <!--Garranty-->
+    {% include 'site/includes/garanty.html' %}
+    </main>
+    <!--Footer-->
+    {% include 'site/includes/footer.html' %}
+    <!-- Plugins -->
+    {% include 'site/includes/plugins.html' %}
+</body>
+</html>

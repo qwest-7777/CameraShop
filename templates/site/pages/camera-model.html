@@ -1,0 +1,84 @@
+{% extends "site/base.html" %}
+{% block content %}
+    <section id="cam-model">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <a href="{% url 'camera:index' %}">ГЛАВНАЯ</a>
+                    <span>/</span>
+                    <a href="{% url 'camera:category' camera.category.id %}">{{ camera.category.name }}</a>
+                    <span>/</span>
+                    <span>{{ camera.camera_name }}</span>
+                </div>
+                <div class="col-12">
+                    <img src="https://sts-hik.uz/upload/file/brand/hiklogo.jpg" class="img-none" alt=""/>
+                    <h4></h4>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-5">
+                            <h4>{{ camera.camera_name }}</h4>
+                                <img src="{{ camera.camera_image.url }}"  alt=""/>
+                        </div>
+                        <div class="col-10 col-md-6 col-lg-7">
+                            <div>
+                                <img src="https://sts-hik.uz/upload/file/brand/hiklogo.jpg" alt=""/>
+                                <h6>Краткое описание</h6>
+                                <div class="d-flex">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAqCAYAAADxughHAAAEsUlEQVRoge2a7W/SahiH+ZtNFPbSBsZoeXMy+MBctq5skSogRpyiyYguZkOIfnDL+LJVF5jZnExli9AW2HU+LOuRgzPHtzN2sl9yJ03ztPd9tc+d9Hl+dfCVLMtic3OTTCaD3+9HEAScTudAxOjoKLIsk8lk2NzcxLKsr0vHcXpQq9VIJBI4nU6CwSDz8/Pkcjny+fxARC6XQ1VVAoEATqeTRCJBrVbrBdF1nVAoxOjoKA8fPmRnZ4dBVbVa5cGDB4yMjBAKhdB1HQBHo9FgcnISURR5+fLlOZf571UulxEEgcnJSRqNBo6lpSVEUSSfz593bT+sxcVFBEGgUCjgmJiYQJZlDg4OzruuH1a9XkeWZSYmJnCIokg8Hsc0zfOu64dlWRZTU1OIoohjaGgIRVEuJIhpmiiKwtDQEI7h4eELDzI8PHwJMhC6BBk0XYIMmi5BALrdbl+claTVamEYRs/5TqeDYRgYhmFfa1kWrVbLjn+uNX47iGEYPH78mHv37pHNZslmsywvL9Nut3vGtdttnj59yq1bt0in03z48MGGePHiBclkklQqRa1Wo91u8+zZMzRNQ1VVVFVF0zSePHnSs974rSDVahVRFPF4PITDYcLhMJqm9V1rmiYzMzNcvXoVl8tFsVgETp58NBrlypUrjIyMsLa2Zo91uVzcvHkTVVWJxWJcu3aNSCTy3Y/ZnwI5Pj6mVCrh8/koFovU63UODg44PDzk+Pi4L4GqqgiCgCRJpFIpOp0Oe3t7jI+P4/V6GRsbY3193S5mbGyMnZ0dTNPk8+fPJJNJRFHk1atXfff/JZB2u00ul0MQBBRFQdM0VlZWvjmfTdNkbm4Oj8eDoihEo1GOjo4olUp4vV5UVcXn8/WAeL1ednd37Td3+/ZtRFGkXC7/XhDLsrhz5w5+vx9FUZiensbtdnP37t0+mNME4+PjLC0tEQwGqVQqaJrG9evXyefzyLJsTy1VVRFFEUVRWFhYIBaL4XK5iEQi1Ov1M2v66am1v79vN6BpmkxNTeHxeHj//n1fgtnZWfx+P1tbW4RCIdLpNMFgkGQySaFQ6AFJJBIIgkAkEiEejzM9PU06nebNmzffremnQDqdDu/evWN/f98+l0qlcLvdVKvVb4IEAgE+fvxIPB7H7Xbj8XhYWVlheXkZn89ng5z2iK7rNJtNOp3Od2v5JRDDMJidnSUajfL27Vu2t7cJhULcuHGDo6OjvgQzMzNIkkSj0WBxcRGn02k39PPnz/F6vbx+/dqG/tab/SMg3W6XcrmMJEkEg0E71tbWzkwQCAT48uUL6+vreDweYrEYzWaT1dVVJEmym31ubg6fz2c3+x8FOdXu7i7FYpHV1VX29vbOhNZ1nUqlQqfTodlssrGxwfb2Nt1ul3q9TqVS4dOnT/bYjY0NWq3WfwcySLoEGTRdggyaLkEGTT0g/5stU0EQLvQmdjweP9nEvui2giRJJ7ZCoVC4sEbPo0ePEEXxxOhpNBpEo9ELZ72VSiXbejs8PPzbDA2HwxfSDD1dfPXY0/Pz87Y9nUgkBsqevn//fo89vbCw0G9Pn8qyLLa2tshkMsiyPJA/DGSzWXRd79sn+At7ID4vxiu+NgAAAABJRU5ErkJggg==" alt="camera_img"/>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAqCAYAAADxughHAAAEsUlEQVRoge2a7W/SahiH+ZtNFPbSBsZoeXMy+MBctq5skSogRpyiyYguZkOIfnDL+LJVF5jZnExli9AW2HU+LOuRgzPHtzN2sl9yJ03ztPd9tc+d9Hl+dfCVLMtic3OTTCaD3+9HEAScTudAxOjoKLIsk8lk2NzcxLKsr0vHcXpQq9VIJBI4nU6CwSDz8/Pkcjny+fxARC6XQ1VVAoEATqeTRCJBrVbrBdF1nVAoxOjoKA8fPmRnZ4dBVbVa5cGDB4yMjBAKhdB1HQBHo9FgcnISURR5+fLlOZf571UulxEEgcnJSRqNBo6lpSVEUSSfz593bT+sxcVFBEGgUCjgmJiYQJZlDg4OzruuH1a9XkeWZSYmJnCIokg8Hsc0zfOu64dlWRZTU1OIoohjaGgIRVEuJIhpmiiKwtDQEI7h4eELDzI8PHwJMhC6BBk0XYIMmi5BALrdbl+claTVamEYRs/5TqeDYRgYhmFfa1kWrVbLjn+uNX47iGEYPH78mHv37pHNZslmsywvL9Nut3vGtdttnj59yq1bt0in03z48MGGePHiBclkklQqRa1Wo91u8+zZMzRNQ1VVVFVF0zSePHnSs974rSDVahVRFPF4PITDYcLhMJqm9V1rmiYzMzNcvXoVl8tFsVgETp58NBrlypUrjIyMsLa2Zo91uVzcvHkTVVWJxWJcu3aNSCTy3Y/ZnwI5Pj6mVCrh8/koFovU63UODg44PDzk+Pi4L4GqqgiCgCRJpFIpOp0Oe3t7jI+P4/V6GRsbY3193S5mbGyMnZ0dTNPk8+fPJJNJRFHk1atXfff/JZB2u00ul0MQBBRFQdM0VlZWvjmfTdNkbm4Oj8eDoihEo1GOjo4olUp4vV5UVcXn8/WAeL1ednd37Td3+/ZtRFGkXC7/XhDLsrhz5w5+vx9FUZiensbtdnP37t0+mNME4+PjLC0tEQwGqVQqaJrG9evXyefzyLJsTy1VVRFFEUVRWFhYIBaL4XK5iEQi1Ov1M2v66am1v79vN6BpmkxNTeHxeHj//n1fgtnZWfx+P1tbW4RCIdLpNMFgkGQySaFQ6AFJJBIIgkAkEiEejzM9PU06nebNmzffremnQDqdDu/evWN/f98+l0qlcLvdVKvVb4IEAgE+fvxIPB7H7Xbj8XhYWVlheXkZn89ng5z2iK7rNJtNOp3Od2v5JRDDMJidnSUajfL27Vu2t7cJhULcuHGDo6OjvgQzMzNIkkSj0WBxcRGn02k39PPnz/F6vbx+/dqG/tab/SMg3W6XcrmMJEkEg0E71tbWzkwQCAT48uUL6+vreDweYrEYzWaT1dVVJEmym31ubg6fz2c3+x8FOdXu7i7FYpHV1VX29vbOhNZ1nUqlQqfTodlssrGxwfb2Nt1ul3q9TqVS4dOnT/bYjY0NWq3WfwcySLoEGTRdggyaLkEGTT0g/5stU0EQLvQmdjweP9nEvui2giRJJ7ZCoVC4sEbPo0ePEEXxxOhpNBpEo9ELZ72VSiXbejs8PPzbDA2HwxfSDD1dfPXY0/Pz87Y9nUgkBsqevn//fo89vbCw0G9Pn8qyLLa2tshkMsiyPJA/DGSzWXRd79sn+At7ID4vxiu+NgAAAABJRU5ErkJggg==" alt="camera_img"/>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAqCAYAAADxughHAAAEsUlEQVRoge2a7W/SahiH+ZtNFPbSBsZoeXMy+MBctq5skSogRpyiyYguZkOIfnDL+LJVF5jZnExli9AW2HU+LOuRgzPHtzN2sl9yJ03ztPd9tc+d9Hl+dfCVLMtic3OTTCaD3+9HEAScTudAxOjoKLIsk8lk2NzcxLKsr0vHcXpQq9VIJBI4nU6CwSDz8/Pkcjny+fxARC6XQ1VVAoEATqeTRCJBrVbrBdF1nVAoxOjoKA8fPmRnZ4dBVbVa5cGDB4yMjBAKhdB1HQBHo9FgcnISURR5+fLlOZf571UulxEEgcnJSRqNBo6lpSVEUSSfz593bT+sxcVFBEGgUCjgmJiYQJZlDg4OzruuH1a9XkeWZSYmJnCIokg8Hsc0zfOu64dlWRZTU1OIoohjaGgIRVEuJIhpmiiKwtDQEI7h4eELDzI8PHwJMhC6BBk0XYIMmi5BALrdbl+claTVamEYRs/5TqeDYRgYhmFfa1kWrVbLjn+uNX47iGEYPH78mHv37pHNZslmsywvL9Nut3vGtdttnj59yq1bt0in03z48MGGePHiBclkklQqRa1Wo91u8+zZMzRNQ1VVVFVF0zSePHnSs974rSDVahVRFPF4PITDYcLhMJqm9V1rmiYzMzNcvXoVl8tFsVgETp58NBrlypUrjIyMsLa2Zo91uVzcvHkTVVWJxWJcu3aNSCTy3Y/ZnwI5Pj6mVCrh8/koFovU63UODg44PDzk+Pi4L4GqqgiCgCRJpFIpOp0Oe3t7jI+P4/V6GRsbY3193S5mbGyMnZ0dTNPk8+fPJJNJRFHk1atXfff/JZB2u00ul0MQBBRFQdM0VlZWvjmfTdNkbm4Oj8eDoihEo1GOjo4olUp4vV5UVcXn8/WAeL1ednd37Td3+/ZtRFGkXC7/XhDLsrhz5w5+vx9FUZiensbtdnP37t0+mNME4+PjLC0tEQwGqVQqaJrG9evXyefzyLJsTy1VVRFFEUVRWFhYIBaL4XK5iEQi1Ov1M2v66am1v79vN6BpmkxNTeHxeHj//n1fgtnZWfx+P1tbW4RCIdLpNMFgkGQySaFQ6AFJJBIIgkAkEiEejzM9PU06nebNmzffremnQDqdDu/evWN/f98+l0qlcLvdVKvVb4IEAgE+fvxIPB7H7Xbj8XhYWVlheXkZn89ng5z2iK7rNJtNOp3Od2v5JRDDMJidnSUajfL27Vu2t7cJhULcuHGDo6OjvgQzMzNIkkSj0WBxcRGn02k39PPnz/F6vbx+/dqG/tab/SMg3W6XcrmMJEkEg0E71tbWzkwQCAT48uUL6+vreDweYrEYzWaT1dVVJEmym31ubg6fz2c3+x8FOdXu7i7FYpHV1VX29vbOhNZ1nUqlQqfTodlssrGxwfb2Nt1ul3q9TqVS4dOnT/bYjY0NWq3WfwcySLoEGTRdggyaLkEGTT0g/5stU0EQLvQmdjweP9nEvui2giRJJ7ZCoVC4sEbPo0ePEEXxxOhpNBpEo9ELZ72VSiXbejs8PPzbDA2HwxfSDD1dfPXY0/Pz87Y9nUgkBsqevn//fo89vbCw0G9Pn8qyLLa2tshkMsiyPJA/DGSzWXRd79sn+At7ID4vxiu+NgAAAABJRU5ErkJggg==" alt="camera_img"/>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAqCAYAAADxughHAAAEsUlEQVRoge2a7W/SahiH+ZtNFPbSBsZoeXMy+MBctq5skSogRpyiyYguZkOIfnDL+LJVF5jZnExli9AW2HU+LOuRgzPHtzN2sl9yJ03ztPd9tc+d9Hl+dfCVLMtic3OTTCaD3+9HEAScTudAxOjoKLIsk8lk2NzcxLKsr0vHcXpQq9VIJBI4nU6CwSDz8/Pkcjny+fxARC6XQ1VVAoEATqeTRCJBrVbrBdF1nVAoxOjoKA8fPmRnZ4dBVbVa5cGDB4yMjBAKhdB1HQBHo9FgcnISURR5+fLlOZf571UulxEEgcnJSRqNBo6lpSVEUSSfz593bT+sxcVFBEGgUCjgmJiYQJZlDg4OzruuH1a9XkeWZSYmJnCIokg8Hsc0zfOu64dlWRZTU1OIoohjaGgIRVEuJIhpmiiKwtDQEI7h4eELDzI8PHwJMhC6BBk0XYIMmi5BALrdbl+claTVamEYRs/5TqeDYRgYhmFfa1kWrVbLjn+uNX47iGEYPH78mHv37pHNZslmsywvL9Nut3vGtdttnj59yq1bt0in03z48MGGePHiBclkklQqRa1Wo91u8+zZMzRNQ1VVVFVF0zSePHnSs974rSDVahVRFPF4PITDYcLhMJqm9V1rmiYzMzNcvXoVl8tFsVgETp58NBrlypUrjIyMsLa2Zo91uVzcvHkTVVWJxWJcu3aNSCTy3Y/ZnwI5Pj6mVCrh8/koFovU63UODg44PDzk+Pi4L4GqqgiCgCRJpFIpOp0Oe3t7jI+P4/V6GRsbY3193S5mbGyMnZ0dTNPk8+fPJJNJRFHk1atXfff/JZB2u00ul0MQBBRFQdM0VlZWvjmfTdNkbm4Oj8eDoihEo1GOjo4olUp4vV5UVcXn8/WAeL1ednd37Td3+/ZtRFGkXC7/XhDLsrhz5w5+vx9FUZiensbtdnP37t0+mNME4+PjLC0tEQwGqVQqaJrG9evXyefzyLJsTy1VVRFFEUVRWFhYIBaL4XK5iEQi1Ov1M2v66am1v79vN6BpmkxNTeHxeHj//n1fgtnZWfx+P1tbW4RCIdLpNMFgkGQySaFQ6AFJJBIIgkAkEiEejzM9PU06nebNmzffremnQDqdDu/evWN/f98+l0qlcLvdVKvVb4IEAgE+fvxIPB7H7Xbj8XhYWVlheXkZn89ng5z2iK7rNJtNOp3Od2v5JRDDMJidnSUajfL27Vu2t7cJhULcuHGDo6OjvgQzMzNIkkSj0WBxcRGn02k39PPnz/F6vbx+/dqG/tab/SMg3W6XcrmMJEkEg0E71tbWzkwQCAT48uUL6+vreDweYrEYzWaT1dVVJEmym31ubg6fz2c3+x8FOdXu7i7FYpHV1VX29vbOhNZ1nUqlQqfTodlssrGxwfb2Nt1ul3q9TqVS4dOnT/bYjY0NWq3WfwcySLoEGTRdggyaLkEGTT0g/5stU0EQLvQmdjweP9nEvui2giRJJ7ZCoVC4sEbPo0ePEEXxxOhpNBpEo9ELZ72VSiXbejs8PPzbDA2HwxfSDD1dfPXY0/Pz87Y9nUgkBsqevn//fo89vbCw0G9Pn8qyLLa2tshkMsiyPJA/DGSzWXRd79sn+At7ID4vxiu+NgAAAABJRU5ErkJggg==" alt="camera_img"/>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAqCAYAAADxughHAAAEsUlEQVRoge2a7W/SahiH+ZtNFPbSBsZoeXMy+MBctq5skSogRpyiyYguZkOIfnDL+LJVF5jZnExli9AW2HU+LOuRgzPHtzN2sl9yJ03ztPd9tc+d9Hl+dfCVLMtic3OTTCaD3+9HEAScTudAxOjoKLIsk8lk2NzcxLKsr0vHcXpQq9VIJBI4nU6CwSDz8/Pkcjny+fxARC6XQ1VVAoEATqeTRCJBrVbrBdF1nVAoxOjoKA8fPmRnZ4dBVbVa5cGDB4yMjBAKhdB1HQBHo9FgcnISURR5+fLlOZf571UulxEEgcnJSRqNBo6lpSVEUSSfz593bT+sxcVFBEGgUCjgmJiYQJZlDg4OzruuH1a9XkeWZSYmJnCIokg8Hsc0zfOu64dlWRZTU1OIoohjaGgIRVEuJIhpmiiKwtDQEI7h4eELDzI8PHwJMhC6BBk0XYIMmi5BALrdbl+claTVamEYRs/5TqeDYRgYhmFfa1kWrVbLjn+uNX47iGEYPH78mHv37pHNZslmsywvL9Nut3vGtdttnj59yq1bt0in03z48MGGePHiBclkklQqRa1Wo91u8+zZMzRNQ1VVVFVF0zSePHnSs974rSDVahVRFPF4PITDYcLhMJqm9V1rmiYzMzNcvXoVl8tFsVgETp58NBrlypUrjIyMsLa2Zo91uVzcvHkTVVWJxWJcu3aNSCTy3Y/ZnwI5Pj6mVCrh8/koFovU63UODg44PDzk+Pi4L4GqqgiCgCRJpFIpOp0Oe3t7jI+P4/V6GRsbY3193S5mbGyMnZ0dTNPk8+fPJJNJRFHk1atXfff/JZB2u00ul0MQBBRFQdM0VlZWvjmfTdNkbm4Oj8eDoihEo1GOjo4olUp4vV5UVcXn8/WAeL1ednd37Td3+/ZtRFGkXC7/XhDLsrhz5w5+vx9FUZiensbtdnP37t0+mNME4+PjLC0tEQwGqVQqaJrG9evXyefzyLJsTy1VVRFFEUVRWFhYIBaL4XK5iEQi1Ov1M2v66am1v79vN6BpmkxNTeHxeHj//n1fgtnZWfx+P1tbW4RCIdLpNMFgkGQySaFQ6AFJJBIIgkAkEiEejzM9PU06nebNmzffremnQDqdDu/evWN/f98+l0qlcLvdVKvVb4IEAgE+fvxIPB7H7Xbj8XhYWVlheXkZn89ng5z2iK7rNJtNOp3Od2v5JRDDMJidnSUajfL27Vu2t7cJhULcuHGDo6OjvgQzMzNIkkSj0WBxcRGn02k39PPnz/F6vbx+/dqG/tab/SMg3W6XcrmMJEkEg0E71tbWzkwQCAT48uUL6+vreDweYrEYzWaT1dVVJEmym31ubg6fz2c3+x8FOdXu7i7FYpHV1VX29vbOhNZ1nUqlQqfTodlssrGxwfb2Nt1ul3q9TqVS4dOnT/bYjY0NWq3WfwcySLoEGTRdggyaLkEGTT0g/5stU0EQLvQmdjweP9nEvui2giRJJ7ZCoVC4sEbPo0ePEEXxxOhpNBpEo9ELZ72VSiXbejs8PPzbDA2HwxfSDD1dfPXY0/Pz87Y9nUgkBsqevn//fo89vbCw0G9Pn8qyLLa2tshkMsiyPJA/DGSzWXRd79sn+At7ID4vxiu+NgAAAABJRU5ErkJggg==" alt="camera_img"/>
+                                </div>
+                                <ul>
+                                    {% for def in short_def %}
+                                    <li>{{def.camera_short_def}}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="sum">
+                                <span>Цена</span>
+                                <p>{{camera.camera_cost}} <i>сум</i></p>
+                                <button type="submit" class="btn btn-block btn-danger">Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+
+                    <button class="tablink" onclick="openPage('one')" >Описание</button>
+                    <button class="tablink" onclick="openPage('two')" >Характеристики</button>
+                    <button class="tablink" onclick="openPage('three')" >Оплата и Доставка
+                    </button>
+                    <button class="tablink" onclick="openPage('four')" >Аксессуары</button>
+
+                    <div id="one" class="tabcontent">
+                        <h4>{{ camera.camera_name }}</h4>
+                        <p>{{ camera.camera_def }}</p>
+                        <span>{Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, quidem.}</span>
+                    </div>
+
+                    <div id="two" class="tabcontent">
+                        <table class="table table-bordered table-striped">
+                            {% for char in characteristic %}
+                            <tr>
+                                <th>{{char.key}}</th>
+                                <td>{{ char.value }}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+
+                    <div id="three" class="tabcontent">
+                        <p>Оплата и Доставка</p>
+                    </div>
+
+                    <div id="four" class="tabcontent">
+                        <p>{}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

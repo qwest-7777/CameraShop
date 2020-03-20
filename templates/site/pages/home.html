@@ -1,0 +1,81 @@
+{% extends "site/base.html" %}
+{% block content %}
+{% include 'site/includes/header.html' %}
+
+    <!--    Section-1-->
+    <section id="section-1">
+        <div class="container">
+            <div class="row">
+                {% for camera in camera %}
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 offset-md-0">
+                    <div class="card">
+                        <div class="card-header">
+                            <span>{{ camera.camera_name}}</span>
+                            <div>
+                                <a href="category.html">Посмотрите всех <span class="icon icon-enter"></span></a>
+                                <a href="camera-model.html">Заказать <span class="icon icon-enter"></span></a>
+                            </div>
+                        </div>
+                        <a href="camera-model.html">
+                            <img src="{{ camera.camera_image.url }}" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!--    Section-2-->
+    <section id="section-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8 offset-sm-2 col-md-12 col-lg-4 offset-md-0">
+                    <div class="card">
+                        <div>
+                            <span class="icon icon-video"></span>
+                        </div>
+                        <h4>Комплексный подход</h4>
+                        <p>Мы предлагаем только качественное оборудование, а при необходимости
+                            производим высококвалифицированный монтаж с дальнейшим гарантийным сервисным
+                            обслуживанием.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-8 offset-sm-2 col-md-12 col-lg-4 offset-md-0">
+                    <div class="card">
+                        <div>
+                            <span class="icon icon-plus"></span>
+                        </div>
+                        <h4>Опытный персонал</h4>
+                        <p>Специалисты компании «SMART TECHNOLOGY SYSTEMS» помогут вам в кратчайшее
+                            время
+                            подобрать и установить надежное и качественное оборудование для
+                            видеонаблюдения.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-8 offset-sm-2 col-md-12 col-lg-4 offset-md-0">
+                    <div class="card">
+                        <div>
+                            <span class="icon icon-dvr"></span>
+                        </div>
+                        <h4>Современные технологии</h4>
+                        <p>Мы следим за развитием технологий в сфере охранных систем и предлагаем нашим
+                            покупателям оборудование для видеонаблюдения, отвечающее всем современным
+                            требованиям.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+
+
+
+
+
+
+

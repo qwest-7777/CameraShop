@@ -1,0 +1,1 @@
+# CameraShop API and templates

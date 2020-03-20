@@ -1,0 +1,178 @@
+{% load static %}
+<nav id="navbar">
+    <div class="container-fluid">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="{% url 'camera:index' %}" class="logos"><img src="{% static 'images/logos/logo1.png' %}" alt=""/></a>
+            <ul id="ul" class="d-flex pl-0 align-items-center mb-0">
+                <li>
+                    <a href="#" onclick="allCategory()">Все категории</a>
+                    <div id="allCategory">
+                        <div class="cont-categor">
+                            {% for category in categories %}
+                            <a href="{% url 'camera:category' category.id %}">{{ category.name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="{% url 'camera:shops' %}">Магазины</a>
+                </li>
+                <li>
+                    <a href="{% url 'camera:delivery' %}">Доставка</a>
+                </li>
+                <li>
+                    <a href="{% url 'camera:payment' %}">Оплата</a>
+                </li>
+                <li>
+                    <a href="{% url 'camera:services' %}">Услуги</a>
+                </li>
+                <li>
+                    <a href="{% url 'camera:contact' %}">Контакты</a>
+                </li>
+            </ul>
+
+            <div class="search-basket d-flex">
+                <button type="button" class="search-button" onclick="openSearch()">
+                    <span class="icon icon-search"></span>
+                </button>
+
+                <div class="basket" onclick="modalCart()">
+                    <button type="button">
+                        <span class="icon icon-basket"></span>
+                    </button>
+                    <div id="info" class="d-none d-sm-none d-md-none d-lg-block">
+                        <p id="result" class="text-center"></p>
+                    </div>
+                    <div class="d-lg-none info-responsive">
+                        <p id="reslut-responesive" class="text-center">0</p>
+                    </div>
+                </div>
+
+                <div class="user d-none d-sm-none d-md-block">
+                    <button type="button" onmouseover="registrUserEnter()">
+                        <span class="icon icon-user" id="iconUser"></span>
+                    </button>
+                    <div class="inDetail" id="registr" onmouseleave="registrUserLeave()">
+                        <div class="d-flex justify-content-between pl-2 pr-2">
+                            <a href="{% url 'singin' %}">Войти</a>
+                            |
+                            <a href="{% url 'camera:signup' %}">Регистрация</a>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="d-md-none menu" onclick="menuCloseOpen()">
+                    <div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </button>
+            </div>
+
+            <div id="language">
+                <div class="d-flex">
+                    <img src="{% static 'images/icons/uz.svg' %}" alt=""/>
+                    <img src="{% static 'images/icons/ru.svg' %}" alt=""/>
+                    <img src="{% static 'images/icons/usa.svg' %}" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-nav d-block d-sm-block d-md-none" id="menu-nav">
+        <button type="button" class="close-menu" onclick="menuCloseOpen()">
+            <div class="close"></div>
+            <div class="close"></div>
+        </button>
+        <ul class="nav">
+            <li class="nav-item" onclick="collapse()">
+                <a href="#" class="nav-link">Все категории</a>
+                <span class="icon icon-arrow-down" id="iconUpDown"></span>
+                <div id="menuAllCategories">
+                    <ul class="menu-categories-nav">
+
+                        {% for category in categories %}
+
+                        <li class="menu-nav-item">
+                            <a href="#" class="menu-nav-link">{{ category.name }}</a>
+                        </li>
+                            {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Магазин</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Доставка</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Оплата</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Контакты</a>
+            </li>
+            <li class="nav-item" onClick={collapseCobinet}>
+                <p class="nav-link mb-0">Кобинет</p>
+                <collapse>
+                    <ul>
+                        <li class="d-block pl-0">
+                            <a href="#" class="nav-link ml-0">Войти</a>
+                        </li>
+                        <li class="d-block pl-0">
+                            <a href="#" class="nav-link ml-0">Регистрация</a>
+                        </li>
+                    </ul>
+                </collapse>
+            </li>
+            <div id="menu-language">
+                <div class="d-flex">
+                    <img src="{% static 'images/icons/uz.svg' %}" alt=""/>
+                    <img src="{% static 'images/icons/ru.svg' %}" alt=""/>
+                    <img src="{% static 'images/icons/usa.svg' %}" alt=""/>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <div class="layer-cart-product" id="modal-cart">
+        <div class="cart-product">
+            <div class="cart-header d-flex justify-content-between">
+                <h1>Корзина</h1>
+                <button type="button" class="btn btn-danger" onclick="modalCloseCart()">&#10005;</button>
+            </div>
+            <div class="cart-body">
+                <div class="cart-info d-flex justify-content-between">
+                    <h2>Всего товаров: <span id="cart-value"/></h2>
+                    <button type="button" class="btn btn-success">Очистить корзину</button>
+                </div>
+                <div id="product-list" class="d-flex">
+                    <div class="d-flex">
+                        <img src="{% static 'images/ip-camera.jpg' %}" alt=""/>
+                        <div>
+                            <p>Product name</p>
+                            <span>9 999 <i>сум</i></span>
+                        </div>
+                    </div>
+                    <div id="count-pro">
+                        <i class="fa fa-chevron-up"></i>
+                        <p class="item-amount">1</p>
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mini-container" id="open-search">
+        <form action="#">
+            <div class="form-group d-flex justify-content-center" id="search-modal">
+                <input type="text" placeholder="Поиск..."/>
+                <button type="button" onclick="closeSearch()">&#10005;</button>
+            </div>
+        </form>
+    </div>
+</nav>

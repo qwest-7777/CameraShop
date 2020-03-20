@@ -1,0 +1,883 @@
+{% load static %}
+<div id="filtir-nav" onclick="openFiltir()">Фильтры <i class="icon icon-next"></i></div>
+    <div class="filtirnav" id="filtirnav">
+        <h4>Подбор оборудования</h4>
+        <button type="button" class="btn" id="close-filtir" onclick="closeFiltir()">&#10005;</button>
+        <div class="filtir">
+            <div class="card">
+                <div class="card-header">
+                    <p>Бренды</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Hikvision</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">HiWatch</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Ezviz</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Тип камеры</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">IP</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">HD-TVI</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Аналог</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Уличная</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Купольная</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Офисная</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Встраиваемая</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Тип корпуса</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Стандартный корпус</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Купольная</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Цилиндрическая</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Компактная</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Мини-купольная</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Панорамная</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Поворотная</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Возможности</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Wi-Fi</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Встроенный микрофон</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Аудио вход для микрофона</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">слот для SD карта</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">ColorVu</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Исполнение</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Внутреннее</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Уличное</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Антикоррозионное</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Оптическое увеличение</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Нет</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">4х</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">10х</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">20х</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">23х</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">25х</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">30х</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">32х</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">36х</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Оптический сенсор</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS 1/1.7"</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS 1/1.8"</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS 1/1.9"</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS 1/2.5"</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS 1/2.7"</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS 1/2.8"</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS 1/3"</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS 1/4"</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">CMOS</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Кол-во мегапикселей</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">1 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">1,3 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">2 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">3 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">4 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">5 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">6 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">8 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">12 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">16 Мп</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">18 Мп</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>ИК-подсветка</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Нет</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 3 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 10 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 15 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 20 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 30 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 40 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 50 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 70 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 80 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 100 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 110 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 120 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 150 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 200 м</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 500 м (лазер)</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 800 м (лазер)</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">До 1000 м (лазер)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Защита от пыли/влаги</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Нет</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">IP66</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">IP67</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span className="check"/>
+                            </div>
+                            <span class="text-check">IP68</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span className="check"/>
+                            </div>
+                            <span class="text-check">NEMA4X C5-M</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Питание</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">12VDC</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">24VAC</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">PoE 802.3aF</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">High-PoE 802.3at</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">PoC (TVI)</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">36VDC</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>WDR</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">DWDR</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">WDR 120дб</span>
+                        </label>
+                    </div>
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">WDR 140дб</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Вариофокальный объектив</p>
+                </div>
+                <div class="card-body">
+                    <div class="remember-me">
+                        <label class="d-flex">
+                            <input type="checkbox"/>
+                            <div>
+                                <span class="check"/>
+                            </div>
+                            <span class="text-check">Да</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-danger">Найти</a>
+    </div>
